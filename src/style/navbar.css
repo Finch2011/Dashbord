@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.div-navbar{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: #007BFF;
+    transition: all 1s;
+}
