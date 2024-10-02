@@ -3,6 +3,7 @@ import "./style/App.css";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "./layouts/navbar";
 
 function App() {
   const navigate = useNavigate();
@@ -37,6 +38,8 @@ function App() {
 
   return (
     <>
+     <br />
+    <Navbar/>
       <div>
         <ToastContainer />
         <div className="profile-container">
@@ -66,6 +69,7 @@ function App() {
             <ul className="skil">
               <li>Email :{localStorage.getItem("email")}</li>
               <li>Password :{localStorage.getItem("password")}</li>
+              <li>You are Buying Project  : {localStorage.getItem("buy")}</li>
               <li onClick={LogOut} className="Logout">
                 Logout <img src="./public/Logout.svg" alt="" />
               </li>

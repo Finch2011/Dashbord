@@ -9,7 +9,7 @@ function SiginUp() {
     const [Email, setEmail] = useState();
     const [Password, setPassword] = useState();
     const navigate = useNavigate();
-    const n = () =>{
+    const n = () => {
         navigate("/Login")
     }
     const fetchDtat = async () => {
@@ -25,7 +25,7 @@ function SiginUp() {
             } catch (error) {
                 console.log(error.massage)
             }
-            
+
             toast.success('Registration was successful', {
                 position: "top-right",
                 autoClose: 4000,
@@ -37,13 +37,13 @@ function SiginUp() {
                 theme: "light",
                 transition: Bounce,
             });
-            localStorage.setItem("username" , Username)
-            localStorage.setItem("email" , Email)
-            localStorage.setItem("password" , Password)
+            localStorage.setItem("username", Username)
+            localStorage.setItem("email", Email)
+            localStorage.setItem("password", Password)
             setTimeout(() => {
                 n()
             }, 5000);
-            
+
         }
         else if (Password.length < 8) {
             toast.warning('Please enter more than 8 characters', {
@@ -75,6 +75,12 @@ function SiginUp() {
     }
     return (
         <>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
 
             <div className="container">
                 <ToastContainer />

@@ -1,0 +1,58 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+main {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+.main{
+    display: flex;
+    gap: 8rem;
+    font-size: 15px;
+}
+
+img{
+    width: 400px;
+    border-radius: 10px;
+}
+.text-h3{
+    color: #000;
+}
+.flex-project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.project h1{
+    text-align: center;
+}
+footer{
+    width: 1510px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+}
+.btn-home{
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+}
+.btn-home2{
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
