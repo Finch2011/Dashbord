@@ -36,7 +36,7 @@ export default function () {
 
        toast.success('Remove success', {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -44,7 +44,6 @@ export default function () {
         progress: undefined,
         theme: "light",
         transition: Bounce,
-        onClose : ()=> navigate("/")
        })
        removedata()
      }
@@ -78,8 +77,37 @@ export default function () {
                   <h2>Cart Summary</h2>
                   <p>Total: ${sum}</p>
                   <button onClick={()=>{
-                    localStorage.setItem("buy" , "web Project")
-                    navigate("/profil")
+                    
+                    if(sum === 0 ){
+                        toast.error('Your shopping cart is empty', {
+                          position: "top-right",
+                          autoClose: 1000,
+                          hideProgressBar: false,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                          transition: Bounce,
+                          onClose : ()=> navigate("/")
+                         })
+                        
+                    }
+                    else{
+                        toast.success('Checkout success', {
+                          position: "top-right",
+                          autoClose: 1000,
+                          hideProgressBar: false,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                          transition: Bounce,
+                          onClose : ()=> navigate("/profil")
+                         })
+                        localStorage.setItem("buy" , "Web Project"); 
+                    }
                   }}>Checkout</button>
               </section> 
                 
